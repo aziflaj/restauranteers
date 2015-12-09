@@ -7,6 +7,10 @@
 
 module.exports = {
 
+  _config: {
+    rest: true
+  },
+
 	/**
    * List all the records
 	 * @method GET

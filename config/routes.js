@@ -45,10 +45,5 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  'GET /restaurant': 'RestaurantController.find',
-  'POST /restaurant': 'RestaurantController.create',
-  'GET /restaurant/:id': 'RestaurantController.findOne',
-  'PUT /restaurant/:id': 'RestaurantController.update',
-  'DELETE /restaurant/:id': 'RestaurantController.destroy'
 
 };
