@@ -65,15 +65,6 @@ module.exports.connections = {
     database: 'restauranteers'
   },
 
-  mongoLab: {
-    adapter: 'sails-mongo',
-    host: 'ds027155.mongolab.com',
-    port: 27155,
-    user: 'heroku_zm6rfn76',
-    password: 'f1r3lordzuko',
-    database: 'heroku_zm6rfn76'
-  },
-
   /***************************************************************************
   *                                                                          *
   * PostgreSQL is another officially supported relational database.          *
