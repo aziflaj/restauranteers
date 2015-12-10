@@ -50,7 +50,6 @@ module.exports = {
     }
   },
 
-  //TODO: store with password as bcrypt
   beforeCreate: function(user, next) {
     console.log('Saving user');
     bcrypt.genSalt(10, function(err, salt) {
@@ -64,5 +63,14 @@ module.exports = {
         }
       });
     });
+  },
+
+  isAdmin: function(user, next) {
+    if (user.user_type === 'admin') {
+      console.log('admin');
+      next(null, user);
+    } else {
+      next(error);
+    }
   }
 };
