@@ -1,8 +1,8 @@
 /**
  * RestaurantController
  *
- * @description :: Server-side logic for managing restaurants
- * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
+ * @description :: Server-side logic for CRUDing restaurants
+ * @route       :: /restaurant
  */
 
 module.exports = {
@@ -12,18 +12,18 @@ module.exports = {
   },
 
 	/**
-   * List all the records
+   * List all the restaurants in the DB
 	 * @method GET
    * @route /
    */
   find: function (req, res) {
-		return res.send({
-			message: 'Show all restaurants'
-		});
+    return res.send({
+      message: 'Show all restaurants'
+    });
   },
 
   /**
-   * Information about a single ship
+   * Information about a single restaurant, filtered by the ID
    * @method GET
    * @route /:id
    */
@@ -34,15 +34,19 @@ module.exports = {
   },
 
   /**
-   * Craete a new ship instance
+   * Create a new restaurant
 	 * @method POST
    * @route /
    */
   create: function (req, res) {
+    //create
+    return res.send({
+      message: 'Creating restaurant'
+    });
   },
 
   /**
-   * Update an existing Ship
+   * Update an existing restaurant, based on the ID
 	 * @method PUT
    * @route /:id
    */
@@ -54,7 +58,7 @@ module.exports = {
 
 
   /**
-   * Delete an existing ship
+   * Delete the restaurant with the given ID
 	 * @method DELETE
    * @route /:id
    */

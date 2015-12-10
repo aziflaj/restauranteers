@@ -45,5 +45,9 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
+  'GET /demo/admin': 'DemoController.createAdmin',
 
+  '/admin/dashboard': {
+    view: 'admin/dashboard'
+  }
 };

@@ -21,7 +21,7 @@ module.exports = {
 
     url: {
       type: 'string',
-      required: 'false',
+      required: false,
       defaultsTo: '#'
     },
 
