@@ -18,7 +18,7 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-    connection: 'mongoDbServer',
+    connection: 'localDiskDb',
     migrate: 'drop'
   }
 
