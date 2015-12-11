@@ -11,43 +11,43 @@
  *
  * Finally, if those don't match either, the default 404 handler is triggered.
  * See `api/responses/notFound.js` to adjust your app's 404 logic.
- *
- * Note: Sails doesn't ACTUALLY serve stuff from `assets`-- the default Gruntfile in Sails copies
- * flat files from `assets` to `.tmp/public`.  This allows you to do things like compile LESS or
- * CoffeeScript for the front-end.
- *
- * For more information on configuring custom routes, check out:
- * http://sailsjs.org/#!/documentation/concepts/Routes/RouteTargetSyntax.html
  */
 
 module.exports.routes = {
 
-  /***************************************************************************
-  *                                                                          *
-  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-  * etc. depending on your default view engine) your home page.              *
-  *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
-  * `assets` directory)                                                      *
-  *                                                                          *
-  ***************************************************************************/
-
+  // the home page
   '/': {
     view: 'homepage'
   },
 
   /***************************************************************************
   *                                                                          *
-  * Custom routes here...                                                    *
-  *                                                                          *
-  * If a request to a URL doesn't match any of the custom routes above, it   *
-  * is matched against Sails route blueprints. See `config/blueprints.js`    *
-  * for configuration options and examples.                                  *
+  * Login and register routes.                                               *
+  * These routes send a view for GET requests and map to the specified       *
+  * SessionController functions for POST requests                            *
   *                                                                          *
   ***************************************************************************/
-  'GET /demo/admin': 'DemoController.createAdmin',
+
+  'GET /login': { view: 'login' },
+  'POST /login': 'SessionController.login',
+  'GET /register': { view: 'register' },
+  'POST /register': 'SessionController.register',
+
+
+  /***************************************************************************
+  *                                                                          *
+  * Administator-specific routes.                                            *
+  * These routes serve views and functionality to the admin users. Every     *
+  * admin has the access of creating restaurants and asigning a manager      *
+  * to each of them. They can  delete restaurants or managers and also       *
+  * customers from the system.                                               *
+  *                                                                          *
+  ***************************************************************************/
 
   '/admin/dashboard': {
     view: 'admin/dashboard'
-  }
+  },
+
+  // routes used for testing
+  'GET /demo/admin': 'DemoController.createAdmin',
 };

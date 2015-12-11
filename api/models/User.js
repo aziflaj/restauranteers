@@ -46,8 +46,7 @@ module.exports = {
 
     api_key: {
       type: 'string',
-      required: true,
-      defaultsTo: '!'
+      required: false
     }
   },
 
@@ -63,6 +62,24 @@ module.exports = {
           next(null, user);
         }
       });
+    });
+  },
+
+  attemptLogin: function(user, next) {
+    User.findOne({username: user.username}, function(error, foundUser) {
+      if (error) {
+        console.log(error);
+        next(error);
+      } else {
+        bcrypt.compare(user.password, foundUser.password, function(error, res) {
+          if (error) {
+            console.log(error);
+            next(error);
+          } else {
+            next(null, foundUser);
+          }
+        });
+      }
     });
   },
 
@@ -103,10 +120,10 @@ module.exports = {
         summary: 'You don\'t have access here'
       });
     }
-  }
+  },
 
   isDeveloper: function(user, next) {
-    if (user.user_type === 'customer' && user.api_key !== '!') {
+    if (user.user_type === 'customer' && user.api_key) {
       console.log('developer');
       next(null, user);
     } else {

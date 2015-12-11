@@ -23,7 +23,8 @@ module.exports = {
 			} else {
 				return res.send({
 					status: 'OK',
-					message: 'created admin with id ' + user.id
+					message: 'created admin with id ' + user.id,
+					user: user
 				});
 			}
 		});
