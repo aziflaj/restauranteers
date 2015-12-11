@@ -46,7 +46,8 @@ module.exports = {
 
     api_key: {
       type: 'string',
-      required: false
+      required: true,
+      defaultsTo: '!'
     }
   },
 
@@ -70,7 +71,50 @@ module.exports = {
       console.log('admin');
       next(null, user);
     } else {
-      next(error);
+      next({
+        error: 'E_AUTHORIZATION',
+        status: 403, //forbidden
+        summary: 'You don\'t have access here'
+      });
+    }
+  },
+
+  isManager: function(user, next) {
+    if (user.user_type === 'manager') {
+      console.log('manager');
+      next(null, user);
+    } else {
+      next({
+        error: 'E_AUTHORIZATION',
+        status: 403, //forbidden
+        summary: 'You don\'t have access here'
+      });
+    }
+  },
+
+  isCustomer: function(user, next) {
+    if (user.user_type === 'customer') {
+      console.log('customer');
+      next(null, user);
+    } else {
+      next({
+        error: 'E_AUTHORIZATION',
+        status: 403, //forbidden
+        summary: 'You don\'t have access here'
+      });
+    }
+  }
+
+  isDeveloper: function(user, next) {
+    if (user.user_type === 'customer' && user.api_key !== '!') {
+      console.log('developer');
+      next(null, user);
+    } else {
+      next({
+        error: 'E_AUTHORIZATION',
+        status: 403, //forbidden
+        summary: 'You don\'t have access here'
+      });
     }
   }
 };
