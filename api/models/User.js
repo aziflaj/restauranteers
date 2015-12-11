@@ -70,6 +70,12 @@ module.exports = {
       if (error) {
         console.log(error);
         next(error);
+      } else if (foundUser === undefined) {
+        next({
+          error: 'E_AUTHENTICATION',
+          status: 403, //forbidden
+          summary: 'Wrong username or password'
+        });
       } else {
         bcrypt.compare(user.password, foundUser.password, function(error, res) {
           if (error) {
