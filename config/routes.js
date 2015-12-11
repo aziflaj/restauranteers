@@ -22,7 +22,7 @@ module.exports.routes = {
 
   /***************************************************************************
   *                                                                          *
-  * Login and register routes.                                               *
+  * Login/Logout and register routes.                                        *
   * These routes send a view for GET requests and map to the specified       *
   * SessionController functions for POST requests                            *
   *                                                                          *
@@ -32,6 +32,7 @@ module.exports.routes = {
   'POST /login': 'SessionController.login',
   'GET /register': { view: 'register' },
   'POST /register': 'SessionController.register',
+  '/logout': 'SessionController.logout',
 
 
   /***************************************************************************

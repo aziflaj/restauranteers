@@ -49,5 +49,11 @@ module.exports = {
 				return res.send(success);
 			}
 		});
+	},
+
+	logout: function(req, res) {
+		req.session.authenticated = false;
+		req.session.user_id = null;
+		//TODO: redirect to homepage
 	}
 };
