@@ -2,7 +2,7 @@
  * isAdmin
  *
  * @module      :: Policy
- * @description :: Simple policy to allow only authenticated Administrators
+ * @description :: Simple policy to allow only authenticated Customers
  *                 perform a given action
  * @docs        :: http://sailsjs.org/#!/documentation/concepts/Policies
  *
@@ -18,12 +18,12 @@ module.exports = function(req, res, next) {
         console.log(error);
         return res.forbidden('You are not permitted to perform this action.');
       } else {
-        User.isAdmin(user, function(error, admin) {
+        User.isCustomer(user, function(error, customer) {
           if (error) {
             console.log(error);
             return res.forbidden('You are not permitted to perform this action.');
           } else {
-            console.log(admin);
+            console.log(customer);
             return next();
           }
         });

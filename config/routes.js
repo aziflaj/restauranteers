@@ -51,4 +51,6 @@ module.exports.routes = {
 
   // routes used for testing
   'GET /demo/admin': 'DemoController.createAdmin',
+  'GET /demo/customer': 'DemoController.createCustomer',
+  'GET /me': 'UserController.index',
 };

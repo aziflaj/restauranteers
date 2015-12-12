@@ -117,7 +117,6 @@ module.exports = {
 
   isCustomer: function(user, next) {
     if (user.user_type === 'customer') {
-      console.log('customer');
       next(null, user);
     } else {
       next({

@@ -21,7 +21,11 @@ module.exports = {
 				console.log('User found');
 				req.session.user_id = user.id;
 				req.session.authenticated = true;
-				return res.send(user);
+				return res.send({
+					session_id: req.session.user_id,
+					session_auth: req.session.authenticated,
+					user: user
+				});
 			}
 		});
 	},

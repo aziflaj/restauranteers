@@ -7,11 +7,10 @@
 
 module.exports = {
 	createAdmin: function(req, res) {
-		var tryNumber = 0;
 		var admin = {
-			username: 'admin' + tryNumber,
-			password: 'admin' + tryNumber,
-			email: 'admin' + tryNumber + '@example.com',
+			username: 'admin',
+			password: 'admin',
+			email: 'admin@example.com',
 			user_type: 'admin',
 			first_name: 'Admini',
 			last_name: 'Strator'
@@ -24,6 +23,28 @@ module.exports = {
 				return res.send({
 					status: 'OK',
 					message: 'created admin with id ' + user.id,
+					user: user
+				});
+			}
+		});
+	},
+
+	createCustomer: function(req, res) {
+		var customer = {
+			username: 'aziflaj',
+			password: 'password',
+			email: 'aziflaj@example.com',
+			first_name: 'Aldo',
+			last_name: 'Ziflaj'
+		};
+
+		User.create(customer, function(err, user) {
+			if (err || !user) {
+				return res.send(err);
+			} else {
+				return res.send({
+					status: 'OK',
+					message: 'created customer with id ' + user.id,
 					user: user
 				});
 			}
