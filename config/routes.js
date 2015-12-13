@@ -53,4 +53,5 @@ module.exports.routes = {
   'GET /demo/admin': 'DemoController.createAdmin',
   'GET /demo/customer': 'DemoController.createCustomer',
   'GET /me': 'UserController.index',
+  'GET /500': 'DemoController.throw500',
 };

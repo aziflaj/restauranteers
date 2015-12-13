@@ -49,5 +49,9 @@ module.exports = {
 				});
 			}
 		});
+	},
+
+	throw500: function(req, res) {
+		return res.serverError();
 	}
 };
