@@ -15,15 +15,21 @@ body {
   padding-top: 0.2em;
 }
 
+.header {
+  align-items: center;
+}
+
 .header h1 {
   margin: 3em;
   margin-bottom: 0.5 em;
   margin-right: -2em;
+  text-align: justify;
 }
 
 .header p {
   margin-left: 8em;
   margin-top: -7em;
+  text-align: justify;
 }
 
 .a1  {
@@ -85,19 +91,25 @@ body {
 	position:fixed;
 	bottom:0;
 	width:100%;
+  background-color: #E9EAED !important;
+  min-height: 5em;
 }
 
-.footer ul{
+.footer ul {
 	display:inline;
 	float:left;
 	margin-bottom:0em;
 	margin-right:15em;
 	margin-left:5em;
-  padding-top: 0.5em;
+  margin-top: 1.5em;
   padding-bottom: 0.3em;
 }
 
-.list1 li{
+.list1 {
+  margin-right: 5em !important;
+}
+
+.list1 li {
 	display:inline;
 	float:left;
   margin-left:1em;
