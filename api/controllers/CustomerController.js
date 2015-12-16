@@ -8,8 +8,7 @@
 module.exports = {
 	new: function(req, res) {
 		if (req.session.authenticated) {
-			console.log('authenticated');
-			// TODO: redirect to home
+			return res.redirect('/');
 		} else {
 			return res.view('register');
 		}
@@ -31,7 +30,7 @@ module.exports = {
 		User.create(newUser, function(err, success) {
 			if (err) {
 				console.log(err);
-				return res.send(err); // TODO: redirect to register page
+				return res.redirect('/register'); // TODO: add flash
 			} else {
 				return res.send(success);
 			}

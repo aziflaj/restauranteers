@@ -10,8 +10,7 @@ module.exports = {
 	create: function(req, res) {
 		console.log('session');
 		if (req.session.authenticated) {
-			console.log('authenticated');
-			// TODO: redirect to homepage
+			return res.redirect('/');
 		} else {
 			return res.view('login');
 		}
@@ -26,7 +25,7 @@ module.exports = {
 		User.attemptLogin(user, function(error, user) {
 			if (error) {
 				console.log(error);
-				return res.send(error); //TODO: redirect to login
+				return res.redirect('/login'); //TODO: add flash
 			} else {
 				console.log('User found');
 				req.session.user_id = user.id;
