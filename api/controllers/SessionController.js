@@ -7,7 +7,17 @@
 var bcrypt = require('bcrypt');
 
 module.exports = {
-	login: function(req, res) {
+	create: function(req, res) {
+		console.log('session');
+		if (req.session.authenticated) {
+			console.log('authenticated');
+			// TODO: redirect to homepage
+		} else {
+			return res.view('login');
+		}
+	},
+
+	store: function(req, res) {
 		var user = {
 			username: req.body.username,
 			password: req.body.password
@@ -16,7 +26,7 @@ module.exports = {
 		User.attemptLogin(user, function(error, user) {
 			if (error) {
 				console.log(error);
-				return res.send(error);
+				return res.send(error); //TODO: redirect to login
 			} else {
 				console.log('User found');
 				req.session.user_id = user.id;
@@ -26,31 +36,6 @@ module.exports = {
 					session_auth: req.session.authenticated,
 					user: user
 				});
-			}
-		});
-	},
-
-	register: function(req, res) {
-		if (req.body.password !== req.body.password_repeat) {
-			console.log('pwd: ' + req.body.password);
-			console.log('rpt_pwd: ' + req.body.password_repeat);
-			return res.send('Passwords don\'t match'); //TODO: add some flash
-		}
-
-		var newUser = {
-			first_name: req.body.first_name,
-			last_name: req.body.last_name,
-			email: req.body.email,
-			username: req.body.username,
-			password: req.body.password
-		};
-
-		User.create(newUser, function(err, success) {
-			if (err) {
-				console.log(err);
-				return res.send(err);
-			} else {
-				return res.send(success);
 			}
 		});
 	},

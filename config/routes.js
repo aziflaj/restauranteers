@@ -32,11 +32,19 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'GET /login': { view: 'login' },
-  'POST /login': 'SessionController.login',
-  'GET /register': { view: 'register' },
-  'POST /register': 'SessionController.register',
+  'GET /login': 'SessionController.create',
+  'POST /login': 'SessionController.store',
   '/logout': 'SessionController.logout',
+
+  /***************************************************************************
+  *                                                                          *
+  * Customer-specific routes.                                                *
+  * These routes serve views and functionality to the customers.             *
+  *                                                                          *
+  ***************************************************************************/
+
+  'GET /register': 'CustomerController.new',
+  'POST /register': 'CustomerController.create',
 
 
   /***************************************************************************
