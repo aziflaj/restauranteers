@@ -1,16 +1,64 @@
-<h1>Restauranteers</h1>
-<p>
-  <em>Homeworks can be fun</em> :-)
-</p>
+<div id="slider">
+  <div class="section">
+    <div class="slide">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 slide1-bg">
+            <img src="images/slide1.jpg" class="image1" />
+          </div>
+          <div class="col-md-6 header" >
+              <h1>Find Your Best Places to eat!</h1>
+              <p>You have always wanted to know where to spend time with family and friends...
+                But you never knew about menu, characteristics and mostly about prices of the food?! Here we come...
+                Find the most comfortable place for you to eat and drink
+                and share it with your loved ones!</p>
+          <ul class="a1">
+            <a href="login.html"><button type="button" class=" btn btn-alert btn-lg" >Log In</button></a>
+            <a href="register.html"><button type="button" class=" btn btn-alert btn-lg" > Sign Up</button></a>
+          </ul>
+          </div>
+        </div>
 
-<p>
-  Restauranteers is a final project developed for the Software Engineering course in the Polytechnic University of Tirana. The application shows a list of restaurants (including their menus) and allows users write reviews about them.
+      </div>
 
-  The application is built using a full-stack JavaScript solution:
-  <ul>
-    <li><a href="https://www.mongodb.org/">MongoDB</a> for the database</li>
-    <li><a href="http://sailsjs.org/">Sails.js</a>, a <a href="http://nodejs.org/">Node.js</a> framework for the back-end logic
-    </li>
-    <li><a href="http://angularjs.org/">AngularJS</a> in the front</li>
-  </ul>
-</p>
+    </div>
+    <div class="slide slide2-bg">
+         <h1><strong>Join The Biggest Food Network</strong></h1>
+        <a href="register.html"> <button type="button" class=" btn btn-danger btn-lg" > Join Us!</button></a>
+    </div>
+
+    <div class="slide">
+
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-6 header">
+            <h1>Mobile Apps</h1>
+            <p>From now and on even on mobile with all kind of softwares!</p>
+
+            <ul class="get-app">
+              <li><a href="#"><img src="ios.png"></a></li>
+              <li><a href="#"><img src="android.png"></a></li>
+              <li><a href="#"><img src="windows.png"></a></li>
+              <li><a href="#"><img src="blackberry.png"></a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-6">
+              <img src="images/mobile.png" class="image3"/>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#slider').fullpage();
+  });
+</script>

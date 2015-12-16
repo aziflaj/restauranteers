@@ -1,0 +1,17 @@
+/**************************************************
+* Base CSS                                        *
+*                                                 *
+* This file contains basic rules included in the  *
+* whole HTML pages                                *
+**************************************************/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #E9EAED;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 20px;
+}

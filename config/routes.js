@@ -20,6 +20,10 @@ module.exports.routes = {
     view: 'homepage'
   },
 
+  '/about-us': {
+    view: 'about'
+  },
+
   /***************************************************************************
   *                                                                          *
   * Login/Logout and register routes.                                        *

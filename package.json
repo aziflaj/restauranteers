@@ -1,8 +1,8 @@
 {
   "name": "Restauranteers",
   "private": true,
-  "version": "0.0.0",
-  "description": "a Sails application",
+  "version": "0.1.0",
+  "description": "The application shows a list of restaurants (including their menus) and allows users write reviews about them.",
   "keywords": [],
   "dependencies": {
     "bcrypt": "^0.8.5",
@@ -35,5 +35,5 @@
     "url": "git://github.com/aziflaj/Restauranteers.git"
   },
   "author": "aziflaj",
-  "license": ""
+  "license": "MIT"
 }

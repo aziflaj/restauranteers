@@ -28,12 +28,49 @@
             + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     -->
 
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="/styles/layout.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="/styles/modules.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <!--STYLES END-->
+
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/jquery.fullpage.min.js"></script>
   </head>
 
   <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="homepage.html">Restauranteers</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-us">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Sign Up</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
     <%- body %>
 
 
@@ -60,7 +97,7 @@
     -->
 
     <!--TEMPLATES-->
-    
+
     <!--TEMPLATES END-->
 
 
@@ -87,8 +124,29 @@
 
     -->
 
+    <div class="footer">
+
+      <ul class="pull-right list1">
+        <li>2015© Copyright</li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Developers</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Contact</a></li>
+
+      </ul>
+      <ul class="pull-left list2">
+         <li><a href="#"><img src="images/facebook.png"/></a></li>
+        <li><a href="#"><img src="images/twitter.png"/></a></li>
+        <li><a href="#"><img src="images/pinterest.png"/></a></li>
+        <li><a href="#"><img src="images/google+.png"/></a></li>
+      </ul>
+    </div>
+
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="/js/jquery.fullpage.min.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

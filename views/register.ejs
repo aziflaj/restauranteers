@@ -1,9 +1,29 @@
-<form action="/register" method="post">
-  <input type="text" name="first_name" placeholder="First Name"><br>
-  <input type="text" name="last_name" placeholder="Last Name"><br>
-  <input type="email" name="email" placeholder="Email"><br>
-  <input type="text" name="username" placeholder="Pick a username"><br>
-  <input type="password" name="password" placeholder="Password"><br>
-  <input type="password" name="password_repeat" placeholder="Repeat password"><br>
-  <button type="submit">Register</button>
-</form>
+<h1>Join Restauranteers </h1>
+<section class="loginform cf">
+	<form name="login" action="index_submit" method="get" accept-charset="utf-8">
+	  <div class="form-group">
+      <label for="fullname">Full Name</label>
+			<input type="text" class="form-control" name="fullname" placeholder="Your name goes here" required>
+		</div>
+
+	   <div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" class="form-control" name="username" placeholder="Username" required>
+	  </div>
+
+    <div class="form-group">
+			<label for="usermail">Email</label>
+			<input type="email" class="form-control" name="usermail" placeholder="yourname@email.com" required>
+	  </div>
+
+  	<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" class="form-control" name="password" placeholder="Password" required>
+    </div>
+
+		<div class="form-group">
+      <a href="register.html"><button type="button" class="btn btn-block btn-success"> Sign Up</button></a>
+      <a href="login.html">Already have an account?</a>
+		</div>
+	</form>
+</section>

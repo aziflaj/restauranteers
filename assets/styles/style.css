@@ -1,0 +1,116 @@
+body {
+  background-color: #E9EAED;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.nav-menu li {
+  font-size: 1.3em;
+}
+
+.image1 {
+  width: 600px;
+  height: 600px;
+  padding-bottom: 8em;
+  padding-top: 0.2em;
+}
+
+.header h1 {
+  margin: 3em;
+  margin-bottom: 0.5 em;
+  margin-right: -2em;
+}
+
+.header p {
+  margin-left: 8em;
+  margin-top: -7em;
+}
+
+.a1  {
+  display: inline;
+  margin-left: 10em;
+}
+
+
+.slide2-bg{
+  background:url('../images/sfondi2.png' );
+  background-repeat: repeat-x;
+
+}
+
+.slide2-bg h1 {
+  text-align:center;
+  color: #FFFAF9 ;
+  font-size: 65px ;
+}
+
+.slide2-bg button {
+
+  text-align: center;
+  margin-left: 32em;
+  margin-right:auto;
+  margin-top: 1em;
+}
+.image3 {
+  width: 600px;
+  height: 500px;
+  padding-bottom: 5em;
+  padding-top: 1em;
+}
+/* App links */
+
+.get-app {
+  list-style: none;
+  padding-bottom: 9px;
+  padding-left: 8em;
+  padding-top: 9px;
+}
+
+.get-app li {
+  display: inline-block;
+  float: left;
+  margin-bottom: 5px;
+  margin-left: 0em;
+  margin-right: 3em;
+
+}
+
+.get-app img {
+  height: 40px;
+}
+
+/*footer*/
+
+.footer {
+	position:fixed;
+	bottom:0;
+	width:100%;
+}
+
+.footer ul{
+	display:inline;
+	float:left;
+	margin-bottom:0em;
+	margin-right:15em;
+	margin-left:5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.3em;
+}
+
+.list1 li{
+	display:inline;
+	float:left;
+  margin-left:1em;
+}
+
+.list1 a{
+	text-decoration: none !important;
+  color: #242424;
+}
+
+.list2 li{
+	display :inline;
+	float:left;
+	margin-right:1em;
+  position: relative;
+}
