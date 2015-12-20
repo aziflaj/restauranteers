@@ -66,4 +66,7 @@ module.exports.routes = {
   'GET /demo/customer': 'DemoController.createCustomer',
   'GET /me': 'UserController.index',
   'GET /500': 'DemoController.throw500',
+  '/customer': {
+    view: 'customer/settings'
+  }
 };
