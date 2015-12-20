@@ -126,3 +126,21 @@ body {
 	margin-right:1em;
   position: relative;
 }
+
+.customer-settings {
+  max-width: 80%;
+  min-height: 450px;
+}
+
+.customer-settings strong {
+  font-size: 1.2em;
+  color: #2C2C2C;
+}
+
+.settings-title {
+  margin-bottom: 1em;
+}
+
+.customer-settings h3 {
+  font-size: 2em;
+}
