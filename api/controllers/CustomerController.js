@@ -35,5 +35,27 @@ module.exports = {
 				return res.send(success);
 			}
 		});
+	},
+
+	settings: function(req, res) {
+		User.findOne({id: req.session.user_id}, function(err, user) {
+			return res.view('customer/settings', user);
+		});
+	},
+
+	developer: function(req, res) {
+		User.findOne({id: req.session.user_id}, function(err, user) {
+			if (err) {
+				console.log(err);
+			} else {
+				User.generateApiKey(user, function(err, user) {
+					if (err) {
+						console.log(err);
+					} else {
+						return res.view('customer/settings', user);
+					}
+				});
+			}
+		});
 	}
 };

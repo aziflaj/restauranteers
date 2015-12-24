@@ -45,6 +45,8 @@ module.exports.routes = {
 
   'GET /register': 'CustomerController.new',
   'POST /register': 'CustomerController.create',
+  'GET /customer/settings': 'CustomerController.settings',
+  'POST /customer/dev': 'CustomerController.developer',
 
 
   /***************************************************************************
@@ -66,7 +68,4 @@ module.exports.routes = {
   'GET /demo/customer': 'DemoController.createCustomer',
   'GET /me': 'UserController.index',
   'GET /500': 'DemoController.throw500',
-  '/customer': {
-    view: 'customer/settings'
-  }
 };

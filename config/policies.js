@@ -39,6 +39,11 @@ module.exports.policies = {
   RestaurantController: {
     // find: 'isAdmin'
     find: 'isCustomer'
+  },
+
+  CustomerController: {
+    settings: 'isCustomer',
+    developer: 'isCustomer'
   }
 
 };

@@ -27,21 +27,21 @@
           <div class="form-group">
             <label class="col-sm-4 control-label"><strong>First Name</strong></label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" name="first_name">
+              <input type="text" class="form-control" name="first_name" value="<%= first_name %>">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-4 control-label"><strong>Last Name</strong></label>
             <div class="col-sm-8">
-              <input type="text" class="form-control" name="last_name">
+              <input type="text" class="form-control" name="last_name" value="<%= last_name %>">
             </div>
           </div>
 
           <div class="form-group">
             <label class="col-sm-4 control-label"><strong>Email</strong></label>
             <div class="col-sm-8">
-              <input type="email" class="form-control" name="email">
+              <input type="email" class="form-control" name="email" value="<%= email %>">
             </div>
           </div>
 
@@ -72,12 +72,18 @@
 
       <div role="tabpanel" class="tab-pane fade" id="developer">
         <h3>Developer's API key</h3>
-        <form class="col-md-8">
-          <div class="form-group">
-            <input type="text" class="form-control" name="api_key">
-          </div>
-
-          <button type="button" class="btn btn-primary">Generate API key</button>
+        <form class="col-md-8" action="/customer/dev" method="post">
+          <% if (typeof api_key !== 'undefined') { %>
+            <div class="form-group">
+              <input type="text" class="form-control" name="api_key" value="<%= api_key %>" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary" disabled="disabled">Generate API key</button>
+          <% } else { %>
+            <div class="form-group">
+              <input type="text" class="form-control" name="api_key" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate API key</button>
+          <% } %>
         </form>
       </div>
     </div>
@@ -86,7 +92,7 @@
 
 <script type="text/javascript">
 $('#settings a').click(function (e) {
-  e.preventDefault();
+  // e.preventDefault();
   $(this).tab('show');
 });
 </script>

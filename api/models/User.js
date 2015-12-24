@@ -6,6 +6,8 @@
 */
 
 var bcrypt = require('bcrypt');
+var uuid = require('uuid');
+var hat = require('hat');
 
 module.exports = {
 
@@ -138,5 +140,20 @@ module.exports = {
         summary: 'You don\'t have access here'
       });
     }
+  },
+
+  generateApiKey: function(user, next) {
+    var api_key = hat();
+    console.log('API key generated: ' + api_key);
+    user.api_key = api_key;
+    user.save(function(error, saved) {
+      if (error) {
+        console.log(error);
+        next(error);
+      } else {
+        console.log('user saved');
+        next(null, user);
+      }
+    });
   }
 };
