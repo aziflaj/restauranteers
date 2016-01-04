@@ -1,7 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
 body {
   background-color: #E9EAED;
   margin: 0 !important;
   padding: 0 !important;
+}
+
+.brand-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.3em;
 }
 
 .nav-menu li {
