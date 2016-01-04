@@ -65,8 +65,12 @@
             <li><a href="/">Home</a></li>
             <li><a href="/about-us">About</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/register">Sign Up</a></li>
+            <% if (req.session.authenticated) { %>
+              <li><a href="/logout">Logout</a></li>
+            <% } else { %>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Sign Up</a></li>
+            <% } %>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

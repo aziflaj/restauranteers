@@ -40,8 +40,9 @@ module.exports = {
 	},
 
 	logout: function(req, res) {
+		console.log('logout');
 		req.session.authenticated = false;
 		req.session.user_id = null;
-		//TODO: redirect to homepage
+		return res.redirect('/');
 	}
 };
