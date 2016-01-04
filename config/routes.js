@@ -47,6 +47,7 @@ module.exports.routes = {
   'POST /register': 'CustomerController.create',
   'GET /customer/settings': 'CustomerController.settings',
   'POST /customer/dev': 'CustomerController.developer',
+  'POST /customer/contact': 'CustomerController.updateContact',
 
 
   /***************************************************************************

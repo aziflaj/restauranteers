@@ -35,7 +35,6 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  //TODO: Check this example to protect routes
   RestaurantController: {
     // find: 'isAdmin'
     find: 'isCustomer'

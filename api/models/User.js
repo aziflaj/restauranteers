@@ -155,5 +155,26 @@ module.exports = {
         next(null, user);
       }
     });
+  },
+
+  resetPassword: function(user, password, next) {
+    bcrypt.genSalt(10, function(err, salt) {
+      bcrypt.hash(password, salt, function(error, hash) {
+        if (error) {
+          console.log(error);
+          next(error);
+        } else {
+          user.password = hash;
+          user.save(function(error, saved) {
+            if (error) {
+              console.log(error);
+              next(error);
+            } else {
+              next(null, user);
+            }
+          });
+        }
+      });
+    });
   }
 };

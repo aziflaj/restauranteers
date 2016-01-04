@@ -52,7 +52,43 @@ module.exports = {
 					if (err) {
 						console.log(err);
 					} else {
-						return res.view('customer/settings', user);
+						return res.redirect('customer/settings');
+					}
+				});
+			}
+		});
+	},
+
+	updatePassword: function(req, res) {
+		if (req.body.password === req.body.repeat_password) {
+			User.findOne({id: req.session.user_id}, function(err, user) {
+				User.resetPassword(user, req.body.password, function(err, user) {
+					if (err) {
+						return res.send(err);
+					} else {
+						return res.redirect('customer/settings');
+					}
+				});
+			});
+		} else {
+			return res.redirect('customer/settings');
+		}
+	},
+
+	updateContact: function(req, res) {
+		User.findOne({id: req.session.user_id}, function(err, user) {
+			if (err) {
+				console.log(err);
+			} else {
+				user.first_name = req.body.first_name;
+				user.last_name = req.body.last_name;
+				user.email = req.body.email;
+
+				user.save(function(err, saved) {
+					if (err) {
+						console.log(err);
+					} else {
+						return res.redirect('customer/settings');
 					}
 				});
 			}
