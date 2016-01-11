@@ -1,3 +1,163 @@
-<p>
-  Hello Admin
-</p>
+<div class="customer-settings container">
+  <h2 class="settings-title">Settings</h2>
+  <div class="row">
+    <ul class="nav nav-pills nav-stacked nav-tabs col-md-3" id="settings" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">
+          Contact Info
+        </a>
+      </li>
+
+      <li role="presentation">
+        <a href="#password" aria-controls="password" role="tab" data-toggle="tab">
+          Reset Password
+        </a>
+      </li>
+
+      <li role="presentation">
+        <a href="#addmanager" aria-controls="addmanager" role="tab" data-toggle="tab">
+          Add manager
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#addrestaurant" aria-controls="addrestaurant" role="tab" data-toggle="tab">
+          Add restaurant
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content col-md-8">
+      <div role="tabpanel" class="tab-pane fade in active" id="contact">
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>First Name</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="first_name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Last Name</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="last_name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Username</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="username">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Email</strong></label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" name="email">
+            </div>
+          </div>
+
+          <button type="submit" class="pull-right btn btn-primary">Save</button>
+        </form>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="password">
+        <h3>Create new password</h3>
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>New Password</strong></label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" name="new_password">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Re-enter New</strong></label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" name="repeat_password">
+            </div>
+          </div>
+
+          <button type="submit" class="pull-right btn btn-primary">Save</button>
+        </form>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="addmanager">
+        <h3>Add Manager</h3>
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>First Name</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="first_name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Last Name</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="last_name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Username</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="username">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Email</strong></label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" name="email">
+            </div>
+          </div>
+
+          <button type="submit" class="pull-right btn btn-primary">Save</button>
+        </form>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="addrestaurant">
+        <h3>Add Restaurant</h3>
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Name</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Adress</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="adress">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Website</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="www">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Email</strong></label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" name="email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Telephone</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="telephone">
+            </div>
+          </div>
+
+          <button type="submit" class="pull-right btn btn-primary">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

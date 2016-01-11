@@ -64,6 +64,19 @@ module.exports.routes = {
     view: 'admin/dashboard'
   },
 
+
+  /***************************************************************************
+  *                                                                          *
+  * Manager-specific routes.                                                 *
+  * These routes serve views and functionality to the manager users.         *
+  *                                                                          *
+  ***************************************************************************/
+
+  '/manager/dashboard': {
+    view: 'manager/dashboard'
+  },
+
+
   // routes used for testing
   'GET /demo/admin': 'DemoController.createAdmin',
   'GET /demo/customer': 'DemoController.createCustomer',

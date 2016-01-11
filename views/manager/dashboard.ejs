@@ -1,0 +1,157 @@
+<div class="customer-settings container">
+  <h2 class="settings-title">Settings</h2>
+  <div class="row">
+    <ul class="nav nav-pills nav-stacked nav-tabs col-md-3" id="settings" role="tablist">
+      <li role="presentation" class="active">
+        <a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">
+          Contact Info
+        </a>
+      </li>
+
+      <li role="presentation">
+        <a href="#password" aria-controls="password" role="tab" data-toggle="tab">
+          Reset Password
+        </a>
+      </li>
+
+      <li role="presentation">
+        <a href="#addmenu" aria-controls="addmenu" role="tab" data-toggle="tab">
+          Add Menu
+        </a>
+      </li>
+      <li role="presentation">
+        <a href="#updaterestaurant" aria-controls="updaterestaurant" role="tab" data-toggle="tab">
+          Update Restaurant
+        </a>
+      </li>
+	  <li role="presentation">
+        <a href="#deleterestaurant" aria-controls="deleterestaurant" role="tab" data-toggle="tab">
+          Delete Restaurant
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content col-md-8">
+      <div role="tabpanel" class="tab-pane fade in active" id="contact">
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>First Name</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="first_name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Last Name</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="last_name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Username</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="username">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Email</strong></label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" name="email">
+            </div>
+          </div>
+
+          <button type="submit" class="pull-right btn btn-primary">Save</button>
+        </form>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="password">
+        <h3>Create new password</h3>
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>New Password</strong></label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" name="new_password">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Re-enter New</strong></label>
+            <div class="col-sm-8">
+              <input type="password" class="form-control" name="repeat_password">
+            </div>
+          </div>
+
+          <button type="submit" class="pull-right btn btn-primary">Save</button>
+        </form>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="addmenu">
+        <h3>Add Menu</h3>
+        <form class="form-horizontal" action="index.html" method="post">
+
+
+		  <div class="form-group">
+			<input type="file" id="exampleInputFile">
+		  </div>
+
+			<button type="submit" class="pull-right btn btn-primary">Add</button>
+        </form>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="updaterestaurant">
+        <h3>Update Restaurant</h3>
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Name</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Adress</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="adress">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Website</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="www">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Email</strong></label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control" name="email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><strong>Telephone</strong></label>
+            <div class="col-sm-8">
+              <input type="text" class="form-control" name="telephone">
+            </div>
+          </div>
+
+          <button type="submit" class="pull-right btn btn-primary">Update</button>
+        </form>
+      </div>
+	  <div role="tabpanel" class="tab-pane fade" id="deleterestaurant">
+        <h3>Delete Restaurant</h3>
+        <form class="form-horizontal" action="index.html" method="post">
+          <div class="form-group"><br/>
+            <label ><strong> Are you sure you want to delete your restaurant data?</strong></label>
+          </div>
+
+          <button type="submit" class="pull-left btn btn-primary">Delete</button>
+		      <button type="submit" class=" btn btn-primary">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
